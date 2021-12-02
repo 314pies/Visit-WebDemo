@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Visit_Initial</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" width=720 height=1440 style="width: 720px; height: 1440px; background: #231F20"></canvas>
+    <script src="Build/WebDemo.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/WebDemo.data.gz",
+        frameworkUrl: "Build/WebDemo.framework.js.gz",
+        codeUrl: "Build/WebDemo.wasm.gz",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "Visit_Initial",
+        productVersion: "0.1",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+  </body>
+</html>
